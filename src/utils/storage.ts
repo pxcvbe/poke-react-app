@@ -1,0 +1,1 @@
+export function readJSON<T>(k:string,f:T):T{try{const r=localStorage.getItem(k);return r?JSON.parse(r):f}catch{return f}}export function writeJSON<T>(k:string,v:T){localStorage.setItem(k,JSON.stringify(v))}export function uid(){return Math.random().toString(36).slice(2)+Math.random().toString(36).slice(2)}
